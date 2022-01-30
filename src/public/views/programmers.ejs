@@ -1,0 +1,20 @@
+<html lang="en">
+
+  <%- include('partials/header'); -%>
+
+  <ul class="programmers">
+    <% for(var i = 0; i < allUser.length; i++) {  %>
+      <li class="programmer">
+        <img src="../img/elpatron.jpg" alt=" gusto logo">
+        <h4><%= allUser[i].name + " " + allUser[i].surname %></h4>
+        <p> <%= allUser[i].email %></p>
+      </li>
+    <% } %>
+  
+    
+  </ul>
+
+  <%- include('partials/footer'); -%>
+
+
+

@@ -1,0 +1,22 @@
+<%- include('partials/header'); -%>
+
+<form method="post">
+    <h2>Log in</h2>
+    <% if (message.length > 0) { %>
+    <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+
+
+    <label for="email">Username</label>
+    <input type="text" name="username" required>
+    <div class="email error"></div>
+    <label for="password">Password</label>
+    <input type="password" name="password" required>
+    <div class="password error"></div>
+    <button type="submit">Log in</button>
+
+
+</form>
+
+
+<%- include('partials/footer'); -%>

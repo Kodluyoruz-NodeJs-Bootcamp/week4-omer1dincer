@@ -1,0 +1,29 @@
+<%- include('partials/header'); -%>
+
+<form method="post">
+    <h2>Sign up</h2>
+
+    <% if (message.length > 0) { %>
+    <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+
+    <form method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" required>
+        <label for="surname">Surname</label>
+        <input type="text" name="surname" required>
+        <label for="username">Username</label>
+        <input type="text" name="username" required>
+        <label for="password">Password</label>
+        <input type="password" name="password" required>
+        <label for="role">Role</label>
+        <select class="form-select" name="role">
+            <option value="member" selected>MEMBER</option>
+            <option value="admin">ADMIN</option>
+        </select>
+        <button type="submit">Sign up</button>
+    </form>
+</form>
+
+
+<%- include('partials/footer'); -%>
